@@ -1,39 +1,13 @@
 #include "monty.h"
-
 /**
- * _free - free stack
- * @stack: stack
- */
-
-void _free(stack_t *stack)
+ * f_stack - prints the top
+ * @head: stack head
+ * @counter: line_number
+ * Return: no return
+*/
+void f_stack(stack_t **head, unsigned int counter)
 {
-stack_t *list = NULL;
-
-	list = stack;
-
-	if (list != NULL)
-	{
-		_free(list->next);
-		free(list);
-	}
-
-}
-
-/**
- * clean_stack - Free all and close files
- * @stack: Stack
- */
-
-void clean_stack(stack_t **stack)
-{
-	stack_t *tmp = *stack;
-
-	while (tmp)
-	{
-		tmp = *stack;
-		*stack = (*stack)->next;
-		free(tmp);
-	}
-	fclose(cmd.fd);
-	free(cmd.line);
+	(void)head;
+	(void)counter;
+	bus.lifi = 0;
 }
